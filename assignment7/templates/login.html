@@ -1,0 +1,31 @@
+<html>
+<body>
+<h2 align="center"> Login page </h2><hr><br>
+<div align="center">
+<form action="/validate/" method="post">    {% csrf_token %}
+<table cellspacing="15">
+    <tr>
+        <td>Username : </td>
+        <td><input type="text" required name="username"></td>
+    </tr>
+    <tr>
+        <td>Password : </td>
+        <td><input type="password" required name="password"></td>
+    </tr>
+    <tr>
+        <td><input type="radio" value="admin" name="type"> Admin </td>
+        <td><input type="radio" value="employee" name="type"> Employee </td>
+    </tr>
+    <tr>
+        <td><input type="radio" value="faculty" name="type"> Faculty </td>
+        <td><input type="radio" value="student" name="type"> Student </td>
+    </tr>
+    <tr>
+        <th colspan="2"><button type="submit"> Login </button> </th>
+    </tr>
+</table><br>
+<span style="color: red; font-weight: bold"> {{ response }}</span>
+</form>
+</div>
+</body>
+</html>
